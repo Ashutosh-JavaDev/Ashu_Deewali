@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diwali Flip-Card Greeting</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&family=Yeseva+One&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* Background Image */
     body {
@@ -28,7 +28,8 @@
     /* Card Flip Animation */
     .flip-card-inner {
       position: relative;
-      width: 300px;
+      width: 90%;
+      max-width: 300px;
       height: 400px;
       transform-style: preserve-3d;
       transition: transform 1s;
@@ -70,15 +71,22 @@
     .flip-card-back {
       background: #222;
       color: #FFD700;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-family: 'Yeseva One', serif;
       transform: rotateY(180deg);
       text-align: center;
       padding: 1.5rem;
     }
-    .self{
-      font-family: 'Great Vibes',cursive;
+
+    /* Hindi Font Style */
+    .hindi-font {
+      font-family: 'Noto Sans Devanagari', sans-serif;
     }
+
+    .self {
+      font-family: 'Great Vibes', cursive;
+    }
+
     /* Glow and Flicker Text Effect */
     .glow-text {
       text-shadow: 0 0 8px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 140, 0, 0.7);
@@ -105,8 +113,8 @@
       <!-- Back of Card -->
       <div class="flip-card-back">
         <h1 class="glow-text self">✨ Shubh Deepawali ✨</h1>
-        <p class="text-white">May this Diwali fill your life with light and joy.</p>
-        <p class="text-red-600">✨ जय सिया राम ✨</p>
+        <p class="hindi-font text-white">आपको और आपके परिवार को दिवाली की हार्दिक शुभकामनाएँ</p>
+        <p class="hindi-font text-red-600">✨ जय सिया राम ✨</p>
         <p class="mt-4 text-lg self">- Ashu Ayush</p>
       </div>
     </div>
