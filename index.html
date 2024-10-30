@@ -3,13 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Site</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <title>Diwali Flip-Card Greeting</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Background Image */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      background: url('/ECommerce/Images/pexels-prabhala-raghuvir-11235-57901.jpg') no-repeat center center/cover;
+      color: #FFD700;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Flip Card Container */
+    .flip-card {
+      perspective: 1000px;
+    }
+
+    /* Card Flip Animation */
+    .flip-card-inner {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+
+    /* Card Flip on Click */
+    .flip-card-inner.flipped {
+      transform: rotateY(180deg);
+    }
+
+    /* Flip Card Faces */
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    /* Card Front */
+    .flip-card-front {
+      background: #ff9800;
+      color: #fff;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      background-image: url('/ECommerce/Images/pexels-leeloothefirst-7121496.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Card Back */
+    .flip-card-back {
+      background: #222;
+      color: #FFD700;
+      font-size: 1.8rem;
+      font-family: 'Playfair Display', serif;
+      transform: rotateY(180deg);
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    /* Glow and Flicker Text Effect */
+    .glow-text {
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 140, 0, 0.7);
+      animation: flicker 2s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.9; }
+    }
+  </style>
 </head>
 <body>
-    
 
+  <!-- Flip Card Greeting -->
+  <div class="flip-card">
+    <div id="flip-card-inner" class="flip-card-inner">
+      <!-- Front of Card -->
+      <div class="flip-card-front">
+        <h2>Happy Diwali</h2>
+        <p class="glow-text">Tap to Open!</p>
+      </div>
+      
+      <!-- Back of Card -->
+      <div class="flip-card-back">
+        <h1 class="glow-text">✨ Shubh Deepawali ✨</h1>
+        <p class="text-white">May this Diwali fill your life with light and joy.</p>
+        <p class="text-red-600">✨ Jai Siya Ram ✨</p>
+        <p class="mt-4 text-lg">- Ashu Ayush</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Flip Card on Click
+    document.getElementById('flip-card-inner').addEventListener('click', function() {
+      this.classList.toggle('flipped');
+    });
+  </script>
 </body>
 </html>
