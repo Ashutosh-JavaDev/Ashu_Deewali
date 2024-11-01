@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diwali Flip-Card Greeting</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&family=Yeseva+One&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     /* Background Image */
     body {
@@ -28,8 +28,7 @@
     /* Card Flip Animation */
     .flip-card-inner {
       position: relative;
-      width: 90%;
-      max-width: 300px;
+      width: 300px;
       height: 400px;
       transform-style: preserve-3d;
       transition: transform 1s;
@@ -59,7 +58,7 @@
       background: #ff9800;
       color: #fff;
       font-family: 'Great Vibes', cursive;
-      font-size: 2.2rem;
+      font-size: 2rem;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       background-image: url('/ECommerce/Images/pexels-leeloothefirst-7121496.jpg');
@@ -71,20 +70,11 @@
     .flip-card-back {
       background: #222;
       color: #FFD700;
-      font-size: 1.5rem;
-      font-family: 'Yeseva One', serif;
+      font-size: 1.8rem;
+      font-family: 'Playfair Display', serif;
       transform: rotateY(180deg);
       text-align: center;
       padding: 1.5rem;
-    }
-
-    /* Hindi Font Style */
-    .hindi-font {
-      font-family: 'Noto Sans Devanagari', sans-serif;
-    }
-
-    .self {
-      font-family: 'Great Vibes', cursive;
     }
 
     /* Glow and Flicker Text Effect */
@@ -112,10 +102,10 @@
       
       <!-- Back of Card -->
       <div class="flip-card-back">
-        <h1 class="glow-text self">✨ Shubh Deepawali ✨</h1>
-        <p class="hindi-font text-white">आपको और आपके परिवार को दिवाली की हार्दिक शुभकामनाएँ</p>
-        <p class="hindi-font text-red-600">✨ जय सिया राम ✨</p>
-        <p class="mt-4 text-lg self">- Ashu Ayush</p>
+        <h1 class="glow-text">✨ Shubh Deepawali ✨</h1>
+        <p>May this Diwali fill your life with light and joy.</p>
+        <p>✨ Jai Siya Ram ✨</p>
+        <p class="mt-4 text-lg">- Ashu Ayush</p>
       </div>
     </div>
   </div>
